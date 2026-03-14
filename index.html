@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ADHAUSS | Design & Marketing</title>
+
+<style>
+
+@font-face{
+font-family:'Monterchi Sans';
+src:url('fonts/MonterchiSans-Light.woff2') format('woff2');
+font-weight:300;
+}
+
+@font-face{
+font-family:'Monterchi Sans';
+src:url('fonts/MonterchiSans-Regular.woff2') format('woff2');
+font-weight:400;
+}
+
+@font-face{
+font-family:'Monterchi Sans';
+src:url('fonts/MonterchiSans-SemiBold.woff2') format('woff2');
+font-weight:600;
+}
+
+@font-face{
+font-family:'Monterchi Sans';
+src:url('fonts/MonterchiSans-Bold.woff2') format('woff2');
+font-weight:700;
+}
+
+:root{
+
+--primary:#4ec6d3;
+--dark:#05070a;
+--text:#e8eef2;
+--glass:rgba(255,255,255,0.05);
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Monterchi Sans';
+background:#05070a;
+color:var(--text);
+overflow-x:hidden;
+
+}
+
+canvas{
+
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+
+}
+
+header{
+
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(8px);
+z-index:10;
+
+}
+
+.logo img{
+
+height:45px;
+
+}
+
+nav a{
+
+margin-left:30px;
+text-decoration:none;
+color:#aaa;
+font-size:14px;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--primary);
+
+}
+
+.cta{
+
+background:var(--primary);
+padding:10px 20px;
+border-radius:20px;
+color:black;
+font-weight:600;
+
+}
+
+.hero{
+
+height:100vh;
+display:flex;
+align-items:center;
+padding:0 8%;
+max-width:1100px;
+
+}
+
+.hero h1{
+
+font-size:54px;
+line-height:1.1;
+margin-bottom:20px;
+
+}
+
+.hero span{
+
+color:var(--primary);
+
+}
+
+.hero p{
+
+opacity:.8;
+margin-bottom:30px;
+
+}
+
+.btn{
+
+background:linear-gradient(45deg,#4ec6d3,#2aa3b1);
+border:none;
+padding:16px 30px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+
+}
+
+.section{
+
+padding:120px 8%;
+text-align:center;
+
+}
+
+.section h2{
+
+font-size:36px;
+margin-bottom:20px;
+
+}
+
+.cards{
+
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:var(--glass);
+border:1px solid rgba(255,255,255,0.08);
+padding:40px;
+border-radius:16px;
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+border-color:var(--primary);
+
+}
+
+.stats{
+
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:60px;
+
+}
+
+.stat h3{
+
+font-size:42px;
+color:var(--primary);
+
+}
+
+.portfolio{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:50px;
+
+}
+
+.portfolio img{
+
+width:100%;
+border-radius:10px;
+transition:.3s;
+
+}
+
+.portfolio img:hover{
+
+transform:scale(1.05);
+
+}
+
+.contact{
+
+max-width:600px;
+margin:auto;
+margin-top:40px;
+
+}
+
+input,textarea{
+
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid rgba(255,255,255,0.1);
+background:#0a0d13;
+color:white;
+font-family:'Monterchi Sans';
+
+}
+
+footer{
+
+text-align:center;
+padding:50px;
+opacity:.6;
+
+}
+
+.whatsapp{
+
+position:fixed;
+bottom:30px;
+right:30px;
+background:#25D366;
+padding:16px 18px;
+border-radius:50%;
+font-size:20px;
+color:white;
+text-decoration:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<header>
+
+<div class="logo">
+<img src="logo.svg">
+</div>
+
+<nav>
+
+<a href="#servicos">Serviços</a>
+<a href="#portfolio">Portfólio</a>
+<a href="#contato">Contato</a>
+<a class="cta" href="#">Falar agora</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>
+Transformando <span>marcas</span> com design e estratégia
+</h1>
+
+<p>
+
+Aprimore sua presença no digital conosco! A ADHAUSS cria resultados através de branding, design otimizado e marketing estratégico.
+
+</p>
+
+<button class="btn">Falar com especialista</button>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Resultados</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>+850</h3>
+<p>Clientes atendidos</p>
+</div>
+
+<div class="stat">
+<h3>+1200</h3>
+<p>Projetos</p>
+</div>
+
+</section>
+
+<section class="section" id="servicos">
+
+<h2>Serviços</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Aprimoramento de imagens</h3>
+<p>Imagens profissionais para marketplaces ou feed.</p>
+</div>
+
+<div class="card">
+<h3>Identidade Visual</h3>
+<p>Criação estratégica de marca.</p>
+</div>
+
+<div class="card">
+<h3>Edição de Vídeo</h3>
+<p>Conteúdos otimizados para redes.</p>
+</div>
+
+<div class="card">
+<h3>Campanhas</h3>
+<p>Anuncie seu produto ou serviço para o publico certo.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="portfolio">
+
+<h2>Portfólio</h2>
+
+<div class="portfolio">
+
+<img src="portfolio1.jpg">
+<img src="portfolio2.jpg">
+<img src="portfolio3.jpg">
+
+</div>
+
+</section>
+
+<section class="section" id="contato">
+
+<h2>Entre em contato</h2>
+
+<div class="contact">
+
+<input placeholder="Nome">
+<input placeholder="Email">
+<textarea placeholder="Mensagem"></textarea>
+
+<button class="btn">Enviar mensagem</button>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 ADHAUSS
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/556296577357?text=Olá%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20serviços!">W</a>
+
+<script>
+
+const canvas=document.getElementById("bg")
+const ctx=canvas.getContext("2d")
+
+canvas.width=window.innerWidth
+canvas.height=window.innerHeight
+
+let particles=[]
+
+for(let i=0;i<120;i++){
+
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+vx:(Math.random()-0.5)*0.4,
+vy:(Math.random()-0.5)*0.4
+})
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height)
+
+particles.forEach(p=>{
+
+p.x+=p.vx
+p.y+=p.vy
+
+if(p.x<0||p.x>canvas.width)p.vx*=-1
+if(p.y<0||p.y>canvas.height)p.vy*=-1
+
+ctx.beginPath()
+ctx.arc(p.x,p.y,1.5,0,Math.PI*2)
+ctx.fillStyle="#4ec6d3"
+ctx.fill()
+
+})
+
+requestAnimationFrame(animate)
+
+}
+
+animate()
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
