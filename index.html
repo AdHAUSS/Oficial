@@ -1,483 +1,322 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>ADHAUSS | Design & Marketing</title>
-
-<style>
-
-@font-face{
-font-family:'Monterchi Sans';
-src:url('fonts/MonterchiSans-Light.woff2') format('woff2');
-font-weight:300;
-}
-
-@font-face{
-font-family:'Monterchi Sans';
-src:url('fonts/MonterchiSans-Regular.woff2') format('woff2');
-font-weight:400;
-}
-
-@font-face{
-font-family:'Monterchi Sans';
-src:url('fonts/MonterchiSans-SemiBold.woff2') format('woff2');
-font-weight:600;
-}
-
-@font-face{
-font-family:'Monterchi Sans';
-src:url('fonts/MonterchiSans-Bold.woff2') format('woff2');
-font-weight:700;
-}
-
-:root{
-
---primary:#4ec6d3;
---dark:#05070a;
---text:#e8eef2;
---glass:rgba(255,255,255,0.05);
-
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-font-family:'Monterchi Sans';
-background:#05070a;
-color:var(--text);
-overflow-x:hidden;
-
-}
-
-canvas{
-
-position:fixed;
-top:0;
-left:0;
-z-index:-1;
-
-}
-
-header{
-
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(8px);
-z-index:10;
-
-}
-
-.logo img{
-
-height:45px;
-
-}
-
-nav a{
-
-margin-left:30px;
-text-decoration:none;
-color:#aaa;
-font-size:14px;
-transition:.3s;
-
-}
-
-nav a:hover{
-
-color:var(--primary);
-
-}
-
-.cta{
-
-background:var(--primary);
-padding:10px 20px;
-border-radius:20px;
-color:black;
-font-weight:600;
-
-}
-
-.hero{
-
-height:100vh;
-display:flex;
-align-items:center;
-padding:0 8%;
-max-width:1100px;
-
-}
-
-.hero h1{
-
-font-size:54px;
-line-height:1.1;
-margin-bottom:20px;
-
-}
-
-.hero span{
-
-color:var(--primary);
-
-}
-
-.hero p{
-
-opacity:.8;
-margin-bottom:30px;
-
-}
-
-.btn{
-
-background:linear-gradient(45deg,#4ec6d3,#2aa3b1);
-border:none;
-padding:16px 30px;
-border-radius:30px;
-font-weight:600;
-cursor:pointer;
-
-}
-
-.section{
-
-padding:120px 8%;
-text-align:center;
-
-}
-
-.section h2{
-
-font-size:36px;
-margin-bottom:20px;
-
-}
-
-.cards{
-
-margin-top:60px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
-
-}
-
-.card{
-
-background:var(--glass);
-border:1px solid rgba(255,255,255,0.08);
-padding:40px;
-border-radius:16px;
-transition:.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-border-color:var(--primary);
-
-}
-
-.stats{
-
-display:flex;
-justify-content:center;
-gap:80px;
-margin-top:60px;
-
-}
-
-.stat h3{
-
-font-size:42px;
-color:var(--primary);
-
-}
-
-.portfolio{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:50px;
-
-}
-
-.portfolio img{
-
-width:100%;
-border-radius:10px;
-transition:.3s;
-
-}
-
-.portfolio img:hover{
-
-transform:scale(1.05);
-
-}
-
-.contact{
-
-max-width:600px;
-margin:auto;
-margin-top:40px;
-
-}
-
-input,textarea{
-
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border-radius:8px;
-border:1px solid rgba(255,255,255,0.1);
-background:#0a0d13;
-color:white;
-font-family:'Monterchi Sans';
-
-}
-
-footer{
-
-text-align:center;
-padding:50px;
-opacity:.6;
-
-}
-
-.whatsapp{
-
-position:fixed;
-bottom:30px;
-right:30px;
-background:#25D366;
-padding:16px 18px;
-border-radius:50%;
-font-size:20px;
-color:white;
-text-decoration:none;
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdHauss | Presença Digital Estratégica</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              400: '#D4AF37',
+              500: '#C5A017',
+            },
+            dark: {
+              800: '#1A1A1A',
+              900: '#0A0A0A',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles for Textures & Effects -->
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    
+    /* Subtle noise texture */
+    .bg-noise {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+    
+    /* Subtle tech grid lines */
+    .bg-grid {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 100px 100px;
+    }
+    
+    /* Glow effect */
+    .glow-effect {
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, rgba(0,0,0,0) 60%);
+      top: -300px;
+      right: -300px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
 </head>
-
-<body>
-
-<canvas id="bg"></canvas>
-
-<header>
-
-<div class="logo">
-<img src="logo.svg">
-</div>
-
-<nav>
-
-<a href="#servicos">Serviços</a>
-<a href="#portfolio">Portfólio</a>
-<a href="#contato">Contato</a>
-<a class="cta" href="#">Falar agora</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div>
-
-<h1>
-Transformando <span>marcas</span> com design e estratégia
-</h1>
-
-<p>
-
-Aprimore sua presença no digital conosco! A ADHAUSS cria resultados através de branding, design otimizado e marketing estratégico.
-
-</p>
-
-<button class="btn">Falar com especialista</button>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Resultados</h2>
-
-<div class="stats">
-
-<div class="stat">
-<h3>+850</h3>
-<p>Clientes atendidos</p>
-</div>
-
-<div class="stat">
-<h3>+1200</h3>
-<p>Projetos</p>
-</div>
-
-</section>
-
-<section class="section" id="servicos">
-
-<h2>Serviços</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Aprimoramento de imagens</h3>
-<p>Imagens profissionais para marketplaces ou feed.</p>
-</div>
-
-<div class="card">
-<h3>Identidade Visual</h3>
-<p>Criação estratégica de marca.</p>
-</div>
-
-<div class="card">
-<h3>Edição de Vídeo</h3>
-<p>Conteúdos otimizados para redes.</p>
-</div>
-
-<div class="card">
-<h3>Campanhas</h3>
-<p>Anuncie seu produto ou serviço para o publico certo.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="portfolio">
-
-<h2>Portfólio</h2>
-
-<div class="portfolio">
-
-<img src="portfolio1.jpg">
-<img src="portfolio2.jpg">
-
-</div>
-
-</section>
-
-<section class="section" id="contato">
-
-<h2>Entre em contato</h2>
-
-<div class="contact">
-
-<input placeholder="Nome">
-<input placeholder="Email">
-<textarea placeholder="Mensagem"></textarea>
-
-<button class="btn">Enviar mensagem</button>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 ADHAUSS
-
-</footer>
-
-<a class="whatsapp" href="https://wa.me/556296577357?text=Olá%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20serviços!">W</a>
-
-<script>
-
-const canvas=document.getElementById("bg")
-const ctx=canvas.getContext("2d")
-
-canvas.width=window.innerWidth
-canvas.height=window.innerHeight
-
-let particles=[]
-
-for(let i=0;i<120;i++){
-
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-vx:(Math.random()-0.5)*0.4,
-vy:(Math.random()-0.5)*0.4
-})
-
-}
-
-function animate(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height)
-
-particles.forEach(p=>{
-
-p.x+=p.vx
-p.y+=p.vy
-
-if(p.x<0||p.x>canvas.width)p.vx*=-1
-if(p.y<0||p.y>canvas.height)p.vy*=-1
-
-ctx.beginPath()
-ctx.arc(p.x,p.y,1.5,0,Math.PI*2)
-ctx.fillStyle="#4ec6d3"
-ctx.fill()
-
-})
-
-requestAnimationFrame(animate)
-
-}
-
-animate()
-
-</script>
+<body class="antialiased selection:bg-gold-400 selection:text-black relative">
+  <!-- Textures -->
+  <div class="bg-noise"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-40 top-0 transition-all duration-300 bg-black/50 backdrop-blur-md border-b border-white/5">
+    <div class="container mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <div class="font-display text-2xl font-medium tracking-wider text-white">
+        Ad<span class="text-gold-400">Hauss</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#servicos" class="text-sm font-light text-gray-300 hover:text-white transition-colors">Serviços</a>
+        <a href="#diferenciais" class="text-sm font-light text-gray-300 hover:text-white transition-colors">Diferenciais</a>
+        <a href="#processo" class="text-sm font-light text-gray-300 hover:text-white transition-colors">Processo</a>
+        <a href="#contato" class="text-sm font-medium px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors">Falar conosco</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <div class="glow-effect"></div>
+    <div class="container mx-auto px-6 lg:px-12 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h1 class="font-display text-5xl lg:text-7xl font-light leading-[1.1] tracking-tight text-white mb-6">
+            Transformamos empresas comuns em <span class="text-gold-400 italic">marcas fortes</span> no digital
+          </h1>
+          <p class="text-gray-400 text-lg lg:text-xl font-light leading-relaxed mb-10 max-w-xl">
+            Criação de identidade visual, redes sociais, conteúdo estratégico e landing pages desenvolvidas para gerar clientes.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contato" class="inline-flex justify-center items-center px-8 py-4 bg-white text-black rounded-full font-medium hover:bg-gray-200 transition-all duration-300 hover:scale-105">
+              Começar meu projeto
+            </a>
+            <a href="#servicos" class="inline-flex justify-center items-center px-8 py-4 border border-white/20 text-white rounded-full font-medium hover:bg-white/5 transition-colors duration-300">
+              Conhecer serviços
+            </a>
+          </div>
+        </div>
+        <div class="relative hidden lg:block">
+          <div class="absolute inset-0 bg-gold-400/10 blur-[100px] rounded-full"></div>
+          <img src="https://placehold.co/800x1000/111111/444444?text=Digital+Experience" alt="Mockup Interface" class="relative z-10 rounded-2xl border border-white/10 shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-700 w-full object-cover aspect-[4/5]">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços Section -->
+  <section id="servicos" class="py-32 bg-dark-900 relative z-10">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="mb-20">
+        <h2 class="font-display text-4xl lg:text-5xl font-light text-white mb-6">Nossos Serviços</h2>
+        <div class="w-20 h-px bg-gold-400"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
+          <img src="https://placehold.co/600x400/1a1a1a/333333?text=Brand" alt="Identidade Visual" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+          <h3 class="text-2xl font-display text-white mb-3 font-medium">Identidade Visual</h3>
+          <p class="text-gray-400 font-light mb-8 text-sm leading-relaxed">Design único e memorável que transmite a essência e o valor da sua marca, conectando-se com seu público ideal.</p>
+          <a href="#contato" class="inline-flex items-center text-sm font-medium text-gold-400 hover:text-gold-500 transition-colors relative z-10">
+            Saiba mais 
+            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
+          <img src="https://placehold.co/600x400/1a1a1a/333333?text=Social" alt="Criação de Redes Sociais" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+          <h3 class="text-2xl font-display text-white mb-3 font-medium">Criação de Redes Sociais</h3>
+          <p class="text-gray-400 font-light mb-8 text-sm leading-relaxed">Estratégia e configuração completa para perfis profissionais, atrativos e prontos para gerar autoridade.</p>
+          <a href="#contato" class="inline-flex items-center text-sm font-medium text-gold-400 hover:text-gold-500 transition-colors relative z-10">
+            Saiba mais 
+            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
+          <img src="https://placehold.co/600x400/1a1a1a/333333?text=Posts" alt="Design de Posts" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+          <h3 class="text-2xl font-display text-white mb-3 font-medium">Design de Posts</h3>
+          <p class="text-gray-400 font-light mb-8 text-sm leading-relaxed">Conteúdo visual de alta qualidade, estrategicamente desenhado para engajar e converter sua audiência.</p>
+          <a href="#contato" class="inline-flex items-center text-sm font-medium text-gold-400 hover:text-gold-500 transition-colors relative z-10">
+            Saiba mais 
+            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
+          <img src="https://placehold.co/600x400/1a1a1a/333333?text=Ads" alt="Campanhas Digitais" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+          <h3 class="text-2xl font-display text-white mb-3 font-medium">Campanhas Digitais</h3>
+          <p class="text-gray-400 font-light mb-8 text-sm leading-relaxed">Criativos de alta conversão para anúncios no Instagram, Facebook e Google, otimizando seu investimento.</p>
+          <a href="#contato" class="inline-flex items-center text-sm font-medium text-gold-400 hover:text-gold-500 transition-colors relative z-10">
+            Saiba mais 
+            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
+          <img src="https://placehold.co/600x400/1a1a1a/333333?text=Landing+Pages" alt="Landing Pages" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+          <h3 class="text-2xl font-display text-white mb-3 font-medium">Landing Pages</h3>
+          <p class="text-gray-400 font-light mb-8 text-sm leading-relaxed">Páginas otimizadas, rápidas e focadas exclusivamente em gerar leads qualificados e vendas para seu negócio.</p>
+          <a href="#contato" class="inline-flex items-center text-sm font-medium text-gold-400 hover:text-gold-500 transition-colors relative z-10">
+            Saiba mais 
+            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais Section -->
+  <section id="diferenciais" class="py-32 bg-black relative z-10 border-y border-white/5">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="max-w-4xl mb-24">
+        <h2 class="font-display text-4xl lg:text-5xl font-light text-white leading-tight">
+          Mais que design. Criamos <span class="text-gold-400 italic">presença digital estratégica.</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
+        
+        <div class="relative pl-8 border-l border-white/10 hover:border-gold-400/50 transition-colors duration-500">
+          <div class="absolute -left-[1px] top-0 w-[2px] h-8 bg-gold-400"></div>
+          <span class="text-gold-400 font-mono text-xs tracking-widest mb-4 block uppercase">01</span>
+          <h3 class="text-2xl text-white mb-4 font-light">Estratégia de posicionamento digital</h3>
+          <p class="text-gray-400 font-light leading-relaxed text-sm">Não fazemos apenas telas bonitas. Analisamos seu mercado e público para criar um posicionamento que destaca sua marca da concorrência e atrai os clientes certos.</p>
+        </div>
+
+        <div class="relative pl-8 border-l border-white/10 hover:border-gold-400/50 transition-colors duration-500">
+          <div class="absolute -left-[1px] top-0 w-[2px] h-8 bg-gold-400"></div>
+          <span class="text-gold-400 font-mono text-xs tracking-widest mb-4 block uppercase">02</span>
+          <h3 class="text-2xl text-white mb-4 font-light">Design profissional e consistente</h3>
+          <p class="text-gray-400 font-light leading-relaxed text-sm">Uma identidade visual forte e coesa em todos os pontos de contato, transmitindo confiança, credibilidade e alto valor percebido para sua audiência.</p>
+        </div>
+
+        <div class="relative pl-8 border-l border-white/10 hover:border-gold-400/50 transition-colors duration-500">
+          <div class="absolute -left-[1px] top-0 w-[2px] h-8 bg-gold-400"></div>
+          <span class="text-gold-400 font-mono text-xs tracking-widest mb-4 block uppercase">03</span>
+          <h3 class="text-2xl text-white mb-4 font-light">Estrutura para gerar clientes</h3>
+          <p class="text-gray-400 font-light leading-relaxed text-sm">Cada elemento visual e textual é pensado para guiar o usuário até a ação desejada, transformando visitantes curiosos em clientes reais e engajados.</p>
+        </div>
+
+        <div class="relative pl-8 border-l border-white/10 hover:border-gold-400/50 transition-colors duration-500">
+          <div class="absolute -left-[1px] top-0 w-[2px] h-8 bg-gold-400"></div>
+          <span class="text-gold-400 font-mono text-xs tracking-widest mb-4 block uppercase">04</span>
+          <h3 class="text-2xl text-white mb-4 font-light">Presença digital forte</h3>
+          <p class="text-gray-400 font-light leading-relaxed text-sm">Construímos a base técnica e visual sólida que sua empresa precisa para escalar vendas, construir autoridade e dominar o ambiente online.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Processo Section -->
+  <section id="processo" class="py-32 bg-dark-900 relative z-10">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="text-center mb-24">
+        <h2 class="font-display text-4xl lg:text-5xl font-light text-white mb-6">Nosso Processo</h2>
+        <p class="text-gray-400 font-light text-lg">Metodologia validada para resultados reais e previsíveis.</p>
+      </div>
+      
+      <div class="relative max-w-5xl mx-auto">
+        <!-- Connecting line -->
+        <div class="hidden md:block absolute top-8 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+          
+          <!-- Step 1 -->
+          <div class="text-center group">
+            <div class="w-16 h-16 mx-auto bg-black border border-gold-400/50 rounded-full flex items-center justify-center text-gold-400 font-mono text-xl mb-8 shadow-[0_0_30px_rgba(212,175,55,0.15)] group-hover:scale-110 transition-transform duration-500">1</div>
+            <h3 class="text-xl text-white mb-3 font-medium">Estratégia</h3>
+            <p class="text-gray-500 text-sm font-light leading-relaxed px-4">Imersão no seu negócio, análise de mercado e definição de objetivos claros.</p>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="text-center group">
+            <div class="w-16 h-16 mx-auto bg-black border border-white/10 rounded-full flex items-center justify-center text-white font-mono text-xl mb-8 group-hover:border-white/30 transition-all duration-500">2</div>
+            <h3 class="text-xl text-white mb-3 font-medium">Design</h3>
+            <p class="text-gray-500 text-sm font-light leading-relaxed px-4">Criação visual focada em conversão, usabilidade e estética premium.</p>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="text-center group">
+            <div class="w-16 h-16 mx-auto bg-black border border-white/10 rounded-full flex items-center justify-center text-white font-mono text-xl mb-8 group-hover:border-white/30 transition-all duration-500">3</div>
+            <h3 class="text-xl text-white mb-3 font-medium">Estrutura digital</h3>
+            <p class="text-gray-500 text-sm font-light leading-relaxed px-4">Desenvolvimento técnico impecável e implementação de ferramentas essenciais.</p>
+          </div>
+          
+          <!-- Step 4 -->
+          <div class="text-center group">
+            <div class="w-16 h-16 mx-auto bg-black border border-white/10 rounded-full flex items-center justify-center text-white font-mono text-xl mb-8 group-hover:border-white/30 transition-all duration-500">4</div>
+            <h3 class="text-xl text-white mb-3 font-medium">Lançamento</h3>
+            <p class="text-gray-500 text-sm font-light leading-relaxed px-4">Entrega do projeto, testes finais e acompanhamento inicial de resultados.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 bg-black relative overflow-hidden z-10 border-t border-white/5">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.06)_0%,transparent_70%)]"></div>
+    <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+      <h2 class="font-display text-4xl lg:text-6xl font-light text-white mb-12 max-w-4xl mx-auto leading-tight">
+        Sua empresa merece uma presença digital que <span class="text-gold-400 italic">realmente gera resultados</span>
+      </h2>
+      <a href="https://wa.me/556296577357?text=Olá,%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20serviços." target="_blank" class="inline-flex justify-center items-center px-12 py-5 bg-white text-black rounded-full font-medium text-lg hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.1)]">
+        Falar com a AdHauss
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-dark-900 border-t border-white/5 text-center relative z-10">
+    <div class="font-display text-xl font-medium tracking-wider text-white mb-6 opacity-50">
+      Ad<span class="text-gold-400">Hauss</span>
+    </div>
+    <p class="text-gray-600 font-light text-sm tracking-wide">Direitos Reservados — AdHauss</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/556296577357?text=Olá,%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20serviços." target="_blank" rel="noopener noreferrer" class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.3)] hover:scale-110 hover:-translate-y-1 transition-all duration-300 z-50 group">
+    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-5.824 4.74-10.563 10.564-10.563 5.826 0 10.564 4.738 10.564 10.563 0 5.825-4.738 10.563-10.564 10.563z"/></svg>
+  </a>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
