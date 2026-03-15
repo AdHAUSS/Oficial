@@ -16,24 +16,16 @@
   <!-- Tailwind Config -->
   <script>
     tailwind.config = {
-   theme: {
-    extend: {
-      colors: {
-        brand: {
-          50: '#e6f8fb',
-          100: '#c2eef4',
-          200: '#9be3ec',
-          300: '#6ed3df',
-          400: '#47c4d3',
-          500: '#2fb2c2',
-          600: '#2396a3',
-          700: '#1c7681',
-          800: '#15585f',
-          900: '#0e3b40'
-        },
-        dark: {
-          800: '#111111',
-          900: '#050505'
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+            400: '#47c4d3',
+            500: '#2fb2c2',
+            },
+            dark: {
+              800: '#1A1A1A',
+              900: '#0A0A0A',
             }
           },
           fontFamily: {
@@ -101,7 +93,7 @@
   <nav class="fixed w-full z-40 top-0 bg-black/40 backdrop-blur-xl border-b border-white/10 shadow-lg">
     <div class="container mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
       <div class="flex items-center">
-        <img src="logo-adhauss.png" alt="AdHauss" class="h-28 w-auto">
+        <img src="logo-adhauss.png" alt="AdHauss" class="h-29 w-auto">
       </div>
       <div class="hidden md:flex items-center space-x-8">
         <a href="#servicos" class="text-sm font-light text-gray-300 hover:text-white transition-colors">Serviços</a>
@@ -330,8 +322,8 @@
 
   <!-- Footer -->
   <footer class="py-12 bg-dark-900 border-t border-white/5 text-center relative z-10">
-    <div class="flex items-center">
-        <img src="logo-adhauss.png" alt="AdHauss" class="h-28 w-auto">
+    <div class="flex justify-center items-center">
+        <img src="logo-adhauss.png" alt="AdHauss" class="h-29 w-auto">
     </div>
     <p class="text-gray-600 font-light text-sm tracking-wide">Direitos Reservados — AdHauss</p>
   </footer>
@@ -343,4 +335,3 @@
 
 </body>
 </html>
-
