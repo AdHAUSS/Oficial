@@ -73,6 +73,23 @@ to{
 transform: translateY(100px);
 }
 }
+    .card-glow {
+position: relative;
+}
+
+.card-glow::before {
+content: "";
+position: absolute;
+inset: -1px;
+border-radius: 24px;
+background: linear-gradient(120deg, transparent, rgba(71,196,211,0.4), transparent);
+opacity: 0;
+transition: opacity 0.4s ease;
+}
+
+.card-glow:hover::before {
+opacity: 1;
+}
 
     /* Subtle noise texture */
     .bg-noise {
@@ -180,7 +197,7 @@ autoplay muted loop playsinline>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- Card 1 -->
-        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+        <div class="card-glow group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
           <img src="idvisu.svg" loading="lazy" alt="Identidade Visual" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
           <h3 class="text-2xl font-display text-white mb-3 font-medium">Identidade Visual</h3>
@@ -192,7 +209,7 @@ autoplay muted loop playsinline>
         </div>
 
         <!-- Card 2 -->
-        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+        <div class="card-glow group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
           <img src="redesocial.svg" loading="lazy" alt="Criação de Redes Sociais" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
           <h3 class="text-2xl font-display text-white mb-3 font-medium">Criação de Redes Sociais</h3>
@@ -204,7 +221,7 @@ autoplay muted loop playsinline>
         </div>
 
         <!-- Card 3 -->
-        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+        <div class="card-glow group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
           <img src="post.svg" loading="lazy" alt="Design de Posts" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
           <h3 class="text-2xl font-display text-white mb-3 font-medium">Design de Posts</h3>
@@ -216,7 +233,7 @@ autoplay muted loop playsinline>
         </div>
 
         <!-- Card 4 -->
-        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+        <div class="card-glow group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
           <img src="ads.svg" loading="lazy" alt="Campanhas Digitais" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
           <h3 class="text-2xl font-display text-white mb-3 font-medium">Campanhas Digitais</h3>
@@ -228,7 +245,7 @@ autoplay muted loop playsinline>
         </div>
 
         <!-- Card 5 -->
-        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg flex flex-col">
+        <div class="card-glow group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg flex flex-col">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
           <img src="land.svg" loading="lazy" alt="Landing Pages" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
           <h3 class="text-2xl font-display text-white mb-3 font-medium">Landing Pages</h3>
@@ -240,7 +257,7 @@ autoplay muted loop playsinline>
         </div>
 
          <!-- Card 6 -->
-        <div class="group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
+        <div class="card-glow group bg-black border border-white/5 rounded-3xl p-8 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden shadow-lg">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-bl-full transition-transform group-hover:scale-150 duration-700"></div>
           <img src="edicao.svg" loading="lazy" alt="Edição" class="w-full h-48 object-cover rounded-xl mb-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
           <h3 class="text-2xl font-display text-white mb-3 font-medium">Edição de Imagens e Vídeos</h3>
